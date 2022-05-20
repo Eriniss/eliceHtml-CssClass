@@ -93,3 +93,23 @@
 <!-- HTML 의 요소는 크게 2가지 요소인 block요소와 inline요소로 나뉜다 -->
 <!-- block요소는 y축으로 정렬(줄바꿈 현상 발생)되며 공간을 만들수 있고 상하배치가 가능하다는 특징이 있다 -->
 <!-- 반면 inline요소는 x축으로 정렬(줄바꿈 현상 발생x)되며 공간을 만들수 없고 상하배치가 불가능하다는 특징이 있다 -->
+
+inline방식
+<h1 style='color: bule;'>Hellow world!</h1>
+
+internal방식
+<style>
+  h1 {
+    background-color: yellow;
+  } 
+</style>
+
+<!-- <style>은 <head>에 넣는다 -->
+
+  external방식
+  <link rel="stylesheet" href="style.css">
+
+  <!-- 보통은 코드의 가독성과 유지보수용이성 때문에 external방식이 가장 많이 사용된다 -->
+  <!-- rel은 "stylesheet"를 작성하며 href는 그에 맞는 css의 파일을 연결해준다 -->
+  <!-- 지금 파일 기준으로 css파일과의 연동을 위해선 href의 속성값에 "../CSS_class/css_capter1.css"를 입력해준다 -->
+
