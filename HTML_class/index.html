@@ -113,3 +113,92 @@ internal방식
   <!-- rel은 "stylesheet"를 작성하며 href는 그에 맞는 css의 파일을 연결해준다 -->
   <!-- 지금 파일 기준으로 css파일과의 연동을 위해선 href의 속성값에 "../CSS_class/css_capter1.css"를 입력해준다 -->
 
+  <style>
+    h2 {
+        color: red;
+    }
+    .coding {
+        color: green;
+    }
+    #coding {
+        color: yellow;
+    }
+  </style>
+
+<h2>Type Hello World</h2>
+<h2 class="coding">Class Hello World</h2>
+<h2 id="coding">Id Hello World</h2>
+
+<!-- css에는 총 3가지의 선택자를 사용할 수 있다. 1. <h2>처럼 HTML 고유의 타입으로 지정되어 있는 Type선택자, 2. class 선택자 3. id 선택자 가 있다 -->
+<!-- css에서 HTML 타입을 선택할 때 Type선택자는 지정된 Type을, class선택자는 지정한 이름앞에 .을, id선택자는 지정한 이름앞에 #을 붙여주면 된다. -->
+
+<style>
+  header {
+    color: red;
+  }
+
+  header h2 {
+    color: blue;
+  }
+</style>
+
+<header>
+  <h2>Header H2</h2>
+  <p>Header P</p>
+</header>
+
+<!-- <header>에 <h2>와 <p>가 있으므로 이는 서로 부모자식관계이다 -->
+<!-- <style>에 따라 <h2>와 <p>는 모두 <header>의 속성을 상속받는다 -->
+<!-- 하지만 <h2>의 경우 <style>에서 따로 header h2 를 지정해줬으므로 부모로부터 받은 상속을 덮어 씌우게 되어 blue로 출력되게 된다 -->
+
+<style>
+p { color: red; } 
+p { color: blue; }
+/* blue */
+/* 나중에 작성한 코드가 우선순위를 가진다 */
+
+h3 { color: red; }
+header h3 { color: blue; }
+/* blue */
+/* 구체적으로 작성한 코드가 우선순위를 가진다 */
+
+h3 { color: green; }
+#color { color: blue; }
+/* blue */
+/* 스타일(html내에서 속성값으로 style을 매기는 것), 아이디, 클래스, 타입 순서로 우선순위를 갖는다 */
+</style>
+
+<!-- 이런식으로 우선순위를 정해놓은것을 '케스케이딩'이라고 한다 -->
+
+<style>
+  .paragraph { width: 500px; height: 500px; }
+  /* 요소의 가로길이(width)와 세로길이(height)를 설정할 수 있다 */
+  
+  .paragraph { 
+  font-size: 50px;
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  }
+  /* 위부터 차례로 사이즈, 글씨체, 글꼴, 굵기 를 설정 한것 이다 */
+</style>
+
+<style>
+  .paragraph { 
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+  }
+  /* border: solid 1px blue; 로도 표현 가능하다(순서상관X) */
+  /* 위에서부터 차례로 경계선 스타일, 두께, 색 을 설정 한 것이다 */
+
+  .paragraph {
+    background-color: blue;
+    background-image: url(이미지경로);
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+
+  /* background: blue url(이미지경로) no-repeat top; 로도 표현 가능하다(순서상관X) */
+  /* 위에서부터 차례로 배경색, 이미지, 반복설정, 위치 를 설정 한 것이다 */
+</style>
