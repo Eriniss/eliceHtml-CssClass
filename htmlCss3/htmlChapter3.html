@@ -1,0 +1,29 @@
+<style>
+  .transform {
+     width: 100px;
+     height: 100px;
+     background-color: red;
+
+      transform: rotate(45deg); /* 평면적 구조에서의 각도회전 */
+      
+      transform: scale(2, 3); /* scale에서 앞자리 2 는 상/하, 뒷자리 3 은 좌/우 의 넓이를 각각 나타냄 */
+      
+      transform: translate(100px, 200px); /* 원래 위치를 기준, x축으로 100px만큼, y축으로 200px만큼 이동 */
+      
+      transform: skew(10deg, 20deg) /* 입체적으로 x축으로 10deg만큼, y축으로 20deg만큼 회전 */
+  }
+</style>
+
+<!-- transform의 경우 중복되어 작성되었을때 가장 마지막에 작성된 transform의 속성이 적용된다(모두 덮어 씌워지게 된다(즉, 위의 코드 기준으로 skew값만 적용) -->
+
+<style>
+  p {
+  -webkit-transform: skew(10deg, 20deg); /* 크롬, 사파리에서 지원 */
+
+  -moz-transform: skew(10deg, 20deg); /* 파이어폭스에서 지원 */
+
+  -ms-transform: skew(10deg, 20deg); /* 익스플로러에서 지원 */
+
+  -o-transform: skew(10deg, 20deg); /* 오페라에서 지원 */
+  }
+</style>
