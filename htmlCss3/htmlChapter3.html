@@ -83,3 +83,36 @@
 
 <!--위코드 역시 한줄로 표현이 가능하다 -->
 <!-- 표현식은 transition과 동일하며 duration과 delay를 제외하면 표현순서는 상관 없다 -->
+
+<style>
+
+  .box1 {
+      width: 300px;
+      height: 300px;
+      background-color: red;
+      
+      -webkit-animation: rotation 1500ms linear infinite alternate;
+      /* rotation이라는 이름을 설정하고 1.5초의 동작시간, 일정하게, 무한반복, 왕복동작 */
+  }
+  
+  @-webkit-keyframes rotation {
+      -webkit-from {
+          transform: rotate(-10deg);
+      }
+      -webkit-to {
+          transform: rotate(10deg);
+      }
+  }
+
+/* animation은 css3에서 도입된 기능이므로 -webkit-을 넣어 크롬, 사파리에서 지원해 줄 수 있다 */
+</style>
+
+<style>
+  .container {
+    width: 960px;
+    margin: 0 auto; 
+    /*.이처럼 블록요소를 중앙으로 보내고싶을때는 상하를 0으로, 좌우를 auto로 지정해주면 된다 */
+}
+
+
+</style>
