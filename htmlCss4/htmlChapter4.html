@@ -1,0 +1,55 @@
+<style>
+  .media {
+      width: 500px;
+      height: 500px;
+      background-color: red;
+  } 
+
+@media (min-width: 320px) and (max-width: 800px) {
+  .media {
+      width: 300px;
+      height: 300px;
+      background-color: yellow;
+      
+      border: solid 10px blue
+  }
+}
+</style>
+
+<!-- 미디어쿼리의 기본구조는 위와 같다 -->
+<!-- 여기서, 미디어 쿼리를 사용하면 미디어쿼리 내부에 쓰인 코드가 기존의 코드를 덮어쓰게 된다(상속개념) -->
+<!-- 즉, 위의 함수에서 만약 ackground-color: yellow; 를 지정하지 않는다면 원래의 background값인 background-color: red; 가 적용된다 -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 위의 값은 기본적으로 미디어 쿼리값을 정상적으로 작동시키기 위해 항상 입력해줘야 한다 -->
+<!-- 빈 html문서에 !를 입력하고 enter를 누르면 자동으로 입력된다 -->
+
+<style>
+  @media (min-width: 320px) and (max-width: 800px) {
+    .container {
+    width: 640px;
+    }
+}
+/* 여기서, 브라우저가 320px과 800px 사이공간에 들 시 width를 640으로 지정해준다 */
+
+#intro {
+    height: 160px;
+}
+/* 마찬가지로, 브라우저가 320px과 800px 사이공간에 들 시 height를 160으로 지정해준다 */
+
+#intro h1 {
+width: 100%;
+}
+/* width가 640px의 100%이므로 h1역시 640px의 값을 가진다 */
+
+#intro nav {
+width: 100%
+}
+/* 위와 동일 */
+
+#intro h1 a {
+text-align: center;
+padding: 22px 0 0 0;
+}
+</style>
